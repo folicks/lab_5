@@ -1,0 +1,218 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.whole-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.whole-page h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.whole-page p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.discover-button {
+  background: linear-gradient(45deg, #ff6b6b, #ffa500);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+  margin-bottom: 2rem;
+}
+
+.discover-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
+}
+
+.discover-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.dog-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dog-image {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dog-info {
+  text-align: left;
+}
+
+.attribute {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.clickable-attribute {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.clickable-attribute:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.clickable-attribute.banned {
+  background: rgba(255, 107, 107, 0.8);
+  border: 2px solid #ff4757;
+  text-decoration: line-through;
+}
+
+.ban-list {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ban-list h3 {
+  color: #ff4757;
+  margin-bottom: 1rem;
+}
+
+.banned-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.banned-item {
+  background: rgba(255, 71, 87, 0.8);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid #ff4757;
+}
+
+.banned-item:hover {
+  background: rgba(255, 71, 87, 1);
+  transform: scale(1.1);
+}
+
+.welcome-message {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.welcome-message p {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .whole-page {
+    padding: 1rem;
+  }
+  
+  .whole-page h1 {
+    font-size: 2rem;
+  }
+  
+  .dog-card {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  
+  .dog-image {
+    height: 250px;
+  }
+  
+  .attribute {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
